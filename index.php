@@ -7,15 +7,9 @@ $cislo_2 = rand(0, 9);
 if ($_POST['submit']){
     if (is_numeric($_POST['captcha'])) {
         if ($_SESSION['result'] == $_POST['captcha']) {
-            echo '<pre>';
-            print_r($_POST);
-            echo '</pre>';
-
-            echo '<pre>';
-            print_r($_SESSION);
-            echo '</pre>';
+            echo 'Верно!';
         } else {
-            echo "Неверный ответ!";
+            echo "Неверно!";
         }
     } else {
         echo "Введите число!";
